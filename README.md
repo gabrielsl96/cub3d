@@ -1,5 +1,5 @@
 # cub3D
-![cub.gif](https://github.com/gabrielsl96/cub3d/blob/master/Cub3d.gif)
+![cub.gif](https://github.com/gabrielsl96/cub3d/blob/master/Cub3d.gif = 100)
 
 ## Motor gráfico de raycasting
 Baseado no célebre jogo (o primeiro estilo FPS) Wolfstein 3D, esse projeto trata-se de um renderizador de mapa de duas dimensões.
