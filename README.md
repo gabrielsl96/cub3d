@@ -6,7 +6,7 @@ Você pode criar os seus mapas, escolher as texturas das paredes e das sprites, 
 <img src="https://github.com/gabrielsl96/cub3d/blob/master/Cub3d.gif " width="400">
 
 ## Uso
-Esse projeto usa a biblioteca [minilibx-linux](https://github.com/42Paris/minilibx-linux)(que já está inclusa no repsoitório deste projeto) e para seu uso é necessário xorg, x11 e zlib. Para isso, use o seguinte comando:
+Esse projeto usa a biblioteca [minilibx-linux](https://github.com/42Paris/minilibx-linux) (que já está inclusa no repositório deste projeto) e para seu uso é necessário xorg, x11 e zlib. Para isso, use o seguinte comando:
 ```
 sudo apt-get update && sudo apt-get install xorg libxext-dev zlib1g-dev
 ```
