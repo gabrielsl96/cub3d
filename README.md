@@ -1,4 +1,4 @@
-# cub3D
+#/cub cub3D
 ## Motor gráfico de raycasting
 Baseado no célebre jogo (o primeiro estilo FPS) Wolfstein 3D, esse projeto trata-se de um renderizador de mapa de duas dimensões.
 Você pode criar os seus mapas, escolher as texturas das paredes e das sprites, as cores do teto e do chão e o motor gráfico roda tudo para você.
@@ -11,8 +11,10 @@ Esse projeto usa a biblioteca [minilibx-linux](https://github.com/42Paris/minili
 sudo apt-get update && sudo apt-get install xorg libxext-dev zlib1g-dev
 ```
 
-Após clonar o repositório:
+Após, clonar o repositório:
 ```
+git clone git@github.com:gabrielsl96/cub3d
+cd cub3d
 make
 ```
 ## Configuração do mapa
@@ -32,7 +34,7 @@ Mapa      | 0 - Espaço Vazio, 1 - Parede, 2 - Sprite, WSEN - Posição e Direç
 Veja o exemplo:
 ```
 R 2100 720
-
+D
 NO ./images/wall_sw_1.XPM
 SO ./images/wall_sw_2.XPM
 WE ./images/wall_sw_3.XPM
@@ -75,5 +77,3 @@ D         | Movimento para a direita;
 A         | Movimento para a esquerda;
 E ou -►   | Giro para a direita;
 Q ou ◄-   | Giro para a esquerda;
-
-
