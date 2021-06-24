@@ -1,4 +1,4 @@
-#cub3D
+# CUB3D
 ## Motor gráfico de raycasting
 Baseado no célebre jogo (o primeiro estilo FPS) Wolfstein 3D, esse projeto trata-se de um renderizador de mapa de duas dimensões.
 Você pode criar os seus mapas, escolher as texturas das paredes e das sprites, as cores do teto e do chão e o motor gráfico roda tudo para você.
