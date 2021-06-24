@@ -17,7 +17,7 @@ make
 ```
 ## Configuração do mapa
 É possível criar mapas. Trata-se de um arquivo com extensão ".cub" que contém os seguintes parametros:
-Parametro | Descrição
+Parâmetro | Descrição
 --------- | :------
 R         | Resolução do jogo;
 NO        | Arquivo de imagem ".xpm" que servirá de textura para as paredes do lado Norte;
@@ -66,7 +66,7 @@ Para iniciar o motor gráfico:
 
 ## Recursos
 ### Botões
-Alimentos | Preço
+Botão     | Ação
 --------- | :------
 Esc       | Encerra o programa;
 W         | Movimento para frente;
