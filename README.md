@@ -21,7 +21,7 @@ sudo cp minilibx-linux/mlx.h /usr/local/include
 ```
 
 Após configurar a biblioteca:
-``
+```
 make
 ```
 ## Configuração do mapa
