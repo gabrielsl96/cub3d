@@ -1,17 +1,79 @@
-# cub3D
-![ezgif-6-8f837c016a7f](https://user-images.githubusercontent.com/49005645/118334346-c627b900-b4e3-11eb-88f3-82940d09a5ee.gif)
-
+# CUB3D
 ## Motor gráfico de raycasting
 Baseado no célebre jogo (o primeiro estilo FPS) Wolfstein 3D, esse projeto trata-se de um renderizador de mapa de duas dimensões.
 Você pode criar os seus mapas, escolher as texturas das paredes e das sprites, as cores do teto e do chão e o motor gráfico roda tudo para você.
 
-## Status do projeto
-### Já implementado
-- Leitura de arquivo do mapa (mapa 2D, posição jogador, localização das sprites, texturas, cores);
-- Movimento da câmera (Frente, Trás, Direita, Esquerda e rotação);
-- Pintura das texturas das paredes de acordo com a direção de suas faces (Norte, Sul, Leste e Oeste);
-- "Screenshot" da tela quando passa-se o argumento "--save"
-### Falta implementar
-- Pintura das sprites;
-- Função para validação do mapa (verificar se está cercado por paredes.)
+<img src="https://github.com/gabrielsl96/cub3d/blob/master/Cub3d.gif " width="400">
 
+## Uso
+Esse projeto usa a biblioteca [minilibx-linux](https://github.com/42Paris/minilibx-linux) (que já está inclusa no repositório deste projeto) e para seu uso é necessário xorg, x11 e zlib. Para isso, use o seguinte comando:
+```
+sudo apt-get update && sudo apt-get install xorg libxext-dev zlib1g-dev
+```
+
+Após, clonar o repositório:
+```
+git clone git@github.com:gabrielsl96/cub3d
+cd cub3d
+make
+```
+## Configuração do mapa
+É possível criar mapas. Trata-se de um arquivo com extensão ".cub" que contém os seguintes parametros:
+Parâmetro | Descrição
+--------- | :------
+R         | Resolução do jogo;
+NO        | Arquivo de imagem ".xpm" que servirá de textura para as paredes do lado Norte;
+SO        | Arquivo de imagem ".xpm" que servirá de textura para as paredes do lado Sul;
+WE        | Arquivo de imagem ".xpm" que servirá de textura para as paredes do lado Oeste;
+EA        | Arquivo de imagem ".xpm" que servirá de textura para as parede do lado Leste;
+S         | Arquivo de imagem ".xpm" que servirá de textura para as "sprites";
+C         | Cor do teto em padrão RGB;
+F         | Cor do chão em padrão RGB;
+Mapa      | 0 - Espaço Vazio, 1 - Parede, 2 - Sprite, WSEN - Posição e Direção inicial do jogador; Obs: o mapa deve ser sempre cecado por paredes;
+
+Veja o exemplo:
+```
+R 2100 720
+D
+NO ./images/wall_sw_1.XPM
+SO ./images/wall_sw_2.XPM
+WE ./images/wall_sw_3.XPM
+EA ./images/wall_sw_4.XPM
+S  ./images/sprite.XPM
+
+C 0,0,0
+F 90,90,230
+
+        1111111111111111111111111
+        100000000011000000S000001
+        1011000001110000000000001
+        1001000000000000000200001
+111111111011000001110000000000001
+100000000011000001110111111111111
+11110111111111011100000010001
+11110111111111011101010010001
+11000000110101011100022012221
+10000000000000001100000000001
+10000000000000001101010012221
+1100000111010101111101110000111
+11110111 1110101 101111010001
+11111111 1111111 111111111111
+```
+
+## Rodar
+Para iniciar o motor gráfico:
+```
+.cub3D .<arquivo_do_mapa.cub>
+```
+
+## Recursos
+### Botões
+Botão     | Ação
+--------- | :------
+Esc       | Encerra o programa;
+W         | Movimento para frente;
+S         | Movimento para trás;
+D         | Movimento para a direita;
+A         | Movimento para a esquerda;
+E ou -►   | Giro para a direita;
+Q ou ◄-   | Giro para a esquerda;
