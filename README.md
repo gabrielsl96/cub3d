@@ -70,7 +70,7 @@ F 90,90,230
 ## Rodar
 Para iniciar o motor gráfico:
 ```
-.cub3D .<arquivo_do_mapa.cub>
+./cub3D ./<arquivo_do_mapa.cub>
 ```
 
 ## Recursos
