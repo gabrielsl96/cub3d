@@ -6,7 +6,7 @@
 #    By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/26 14:40:42 by gsousa-l          #+#    #+#              #
-#    Updated: 2021/06/23 23:31:36 by gsousa-l         ###   ########.fr        #
+#    Updated: 2021/06/25 21:45:27 by gsousa-l         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,9 +68,3 @@ fclean: clean
 		make fclean -C ./libft
 
 re:		fclean all
-
-test:
-		./cub3D ./maps/map_sw.cub
-
-print:
-		./cub3D ./maps/map_sw.cub --save

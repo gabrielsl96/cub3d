@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/13 21:33:15 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/06/23 23:10:01 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/06/25 20:12:34 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ void	set_params_sprite(t_sprite *s, int i, t_game *game, double *z_buff)
 			s[i].end_y = game->screen.res_y;
 		s[i].init_x = (game->screen.res_x / 2) + pixel_x;
 		s[i].end_x = s[i].init_x + s[i].width;
-		s[i].active = s[i].angle < ft_deg_to_rad((PLAYER_FOV + 10) / 2);
+		s[i].active = s[i].angle < ft_deg_to_rad((PLAYER_FOV + PRECISION) / 2);
 	}
 }
 

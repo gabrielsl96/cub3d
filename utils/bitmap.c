@@ -6,7 +6,7 @@
 /*   By: gsousa-l <gsousa-l@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/21 16:19:20 by gsousa-l          #+#    #+#             */
-/*   Updated: 2021/06/23 20:35:51 by gsousa-l         ###   ########.fr       */
+/*   Updated: 2021/06/25 20:10:58 by gsousa-l         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,14 +75,9 @@ void	fill_bmp(int fd, t_img *img, t_bmp *bmp, t_window s)
 	printf("Saving bmp...\n");
 	while (y >= 0)
 	{
-		x = s.res_x - 1;
-		while (x >= 0)
-		{
-			index = y * img->line_length / 4 + x;
-			if (write(fd, &img->addr[index], 4) <= 0)
-				message_error("Fail to save bmp process.");
-			x--;
-		}
+		index = y * img->line_length / 4;
+		if (write(fd, &img->addr[index], img->line_length) <= 0)
+			message_error("Fail to save bmp process.");
 		y--;
 	}
 	printf("Finish saving!\n");
@@ -98,6 +93,9 @@ void	save_bmp(t_game *game)
 		perror(strerror(fd));
 	draw_background(game);
 	ft_raycasting(game);
+	game->plane_dist = floor((game->screen.res_x / 2)
+			/ tan(ft_deg_to_rad(PLAYER_FOV / 2)));
+	draw_sprite(game);
 	set_header(game->screen, &bmp);
 	fill_header_bmp(fd, &(game->img), &bmp);
 	fill_bmp(fd, &(game->img), &bmp, game->screen);
