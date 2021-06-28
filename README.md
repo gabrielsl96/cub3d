@@ -28,14 +28,14 @@ make
 É possível criar mapas. Trata-se de um arquivo com extensão ".cub" que contém os seguintes parametros:
 Parâmetro | Descrição
 --------- | :------
-R         | Resolução do jogo;
+R         | Resolução do jogo (Largura, Altura);
 NO        | Arquivo de imagem ".xpm" que servirá de textura para as paredes do lado Norte;
 SO        | Arquivo de imagem ".xpm" que servirá de textura para as paredes do lado Sul;
 WE        | Arquivo de imagem ".xpm" que servirá de textura para as paredes do lado Oeste;
 EA        | Arquivo de imagem ".xpm" que servirá de textura para as parede do lado Leste;
 S         | Arquivo de imagem ".xpm" que servirá de textura para as "sprites";
-C         | Cor do teto em padrão RGB;
-F         | Cor do chão em padrão RGB;
+C         | Cor do teto em padrão RGB(r, g, b);
+F         | Cor do chão em padrão RGB(r, g, b);
 Mapa      | 0 - Espaço Vazio, 1 - Parede, 2 - Sprite, WSEN - Posição e Direção inicial do jogador; Obs: o mapa deve ser sempre cecado por paredes;
 
 Veja o exemplo:
